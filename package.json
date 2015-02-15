@@ -2,7 +2,8 @@
   "name": "fluxie-editore",
   "scripts": {
     "webpack": "./node_modules/webpack/bin/webpack.js --config ./webpack.js --watch --colors --progress",
-    "dev": "npm run webpack"
+    "dev": "npm run webpack;",
+    "server": "node ./server.js"
   },
   "dependencies": {
     "fluxible": "^0.2.1",
