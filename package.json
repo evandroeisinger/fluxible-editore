@@ -6,6 +6,7 @@
     "server": "node ./server.js"
   },
   "dependencies": {
+    "editore": "^1.1.0",
     "fluxible": "^0.2.1",
     "react": "^0.12.2",
     "react-router": "^0.12.0"
