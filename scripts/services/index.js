@@ -16,20 +16,20 @@ module.exports = {
             for (var method in services[name]) {
               _service[method] = function() {
                 var _arguments = arguments;
-                
+
                 return new Promise(function(resolve, reject) {
                   services[name][method].call({
                     resolve: resolve,
                     reject: reject
                   }, _arguments);
                 });
-              };
+              }
             }
-
+            
             return _service;
-          };
-        },
-      };
+          }
+        }
+      }
     },
 
     registerService: function registerService(service) {

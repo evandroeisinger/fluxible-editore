@@ -8,27 +8,10 @@ var app = new Fluxible({
 });
 
 // register services
-// services.registerService(require('./services/exampleService'));
+services.registerService(require('./services/article'));
 
-// action.js:
-// function exampleAction(context, query, done) {
-//   context.getService('exampleService').get(1).then(function(data) {
-//     console.log(data);
-//   }, function(err) {
-//     console.log(err);
-//   });
-// }
-
-// exampleService.js:
-// module.exports = {
-//   name: 'exampleService',
-//   get: function(id) {
-//     if (id)
-//       return this.resolve(id);
-//     else
-//       this.reject('No id');
-//   },
-// }
+// register stores
+app.registerStore(require('./stores/article'));
 
 // register service layer
 app.plug(services);
