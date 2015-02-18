@@ -5,10 +5,10 @@ var React = require('react'),
     DefaultRoute = Router.DefaultRoute;
 
 var App = require('./App'),
-    ArticleList = require('./ArticleList');
+    ArticleEditor = require('./ArticleEditor');
 
 module.exports = (
   <Router.Route handler={App}>
-    <DefaultRoute handler={ArticleList}/>
+    <DefaultRoute handler={ArticleEditor}/>
   </Router.Route>
 );

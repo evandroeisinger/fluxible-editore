@@ -2,6 +2,120 @@
 <html>
 <head>
   <title>Teste</title>
+  <style type="text/css">
+    /* enable fields placeholder */
+    .placeholder::after { 
+      content: attr(data-placeholder);
+      position: absolute;
+      top: 0;
+    }
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+      font-family: sans-serif;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      overflow: scroll;
+      padding: 0 10% 10% 10%;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 4em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      font-style: italic;
+    }
+
+    .field { 
+      border: none; 
+      outline: none;
+    }
+
+    .field p {
+      margin: 0 0 1em 0;
+      padding: 0;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    aside {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20%;
+      border-left: 1px solid black;
+      bottom: 0;
+    }
+
+    #insert-component {
+      margin: 0 0 1em 0;
+    }
+
+    #insert-component button {
+      line-height: 1em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: .5em;
+      background: transparent;
+      margin: 0 1em 0 0;
+      cursor: pointer;
+    }
+
+    aside button {
+      outline: none;
+      line-height: 1em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: .5em;
+      background: white;
+      cursor: pointer;
+
+      display: block;
+      width: 90%;
+      margin: 5%;
+      box-sizing: border-box;
+    }
+
+    #edition-component button, button {
+      outline: none;
+      line-height: 1em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: .5em;
+      background: white;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    #edition-component button:hover, #insert-component button:hover, aside button:hover {
+      background: black;
+      color: white;
+    }
+
+    #edition-component button.active {
+      font-weight: bold;
+    }
+
+    #edition-component:after {
+      content: '';
+      position: absolute;
+      border-color: black transparent transparent transparent;
+      border-width: .25em .25em 0 .25em;
+      border-style: solid;
+      bottom: -.25em;
+      left: 50%;
+      margin-left: -.25em;
+    }
+
+    .invalid { color: red; }
+    .require { color: orange; }
+  </style>
 </head>
 <body id="app">
   <script src="build/main.min.js"></script>
